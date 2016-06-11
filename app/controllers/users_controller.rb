@@ -7,6 +7,12 @@ class UsersController < ApplicationController
 
   def login
   end
+  
+  def logout
+    session[:user_id] = nil
+    flash[:info] = "Vous êtes maintenant déconnecté."
+    redirect_to "/users/home"
+  end
 
   def check
     @current_user = User.where(name: params[:name], password: params[:password]).first
