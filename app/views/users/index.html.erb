@@ -1,0 +1,22 @@
+<h1>Utilisateurs</h1>
+<% if @users.size > 0 %>
+  <table>
+    <thead>
+      <th>Id</th>
+      <th>Nom</th>
+      <th>Rôle</th>
+    </thead>
+    <tbody>
+      <% @users.each do |user| %>
+        <tr>
+          <td><%= user.id %></td>
+          <td><%= user.name %></td>
+          <td><%= user.role %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <p>Il n'y a pas d'utilisateurs.</p>
+<% end %>
+<%= link_to "Revenir à l'accueil", users_home_path %>

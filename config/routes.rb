@@ -1,4 +1,5 @@
 Rails.application.routes.draw do  
+  get 'users' => 'users#index'
   get 'users/home' => 'users#home'
   get 'users/login' => 'users#login'
   delete 'users/login' => 'users#logout'

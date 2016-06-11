@@ -1,11 +1,12 @@
 <% if @current_user %>
   <% if @current_user.role == "admin" %>
     <h1>Bienvenue administrateur <%= @current_user.name %> !</h1>
+    <p><%= link_to "Voir les utilisateurs", users_path %></p>
   <% else %>
     <h1>Bienvenue <%= @current_user.name %> !</h1>
   <% end %>
-  <%= link_to "Se déconnecter", "/users/login", method: :delete %>
+  <p><%= link_to "Se déconnecter", users_login_path, method: :delete %></p>
 <% else %>
   <h1>Bienvenue visiteur anonyme !</h1>
-  <a href="/users/login">S'identifier</a>
+  <p><%= link_to "S'identifier", users_login_path %></p>
 <% end %>

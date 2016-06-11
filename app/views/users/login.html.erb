@@ -1,6 +1,6 @@
 <h1>Connexion</h1>
-<a href="/users/home">Retourner à l'accueil</a>
-<%= form_tag "/users/login", method: :post do %>
+<%= link_to "Retourner à l'accueil", users_home_path %>
+<%= form_tag  users_login_path, method: :post do %>
   <input type="text" name="name" />
   <input type="password" name="password" />
   <input type="submit" value="Se connecter" />
