@@ -5,3 +5,5 @@ Exercice du cours [OpenClassRooms "Continuez avec Ruby on Rails"] (https://openc
 * Création d'un système d'inscription / authentification (sessions)
 
 * Affichage de la liste des utilisateurs (accès restreint aux administrateurs)
+
+* Redirection sur la page d'accueil une fois après déconnexion
